@@ -20,10 +20,10 @@ const ClientProductPage = ({ id }) => {
         if (id) {
             fetchProductData();
         }
-    }, [id]);  // Ejecuta la solicitud cuando `id` cambia
+    }, [id]); 
 
     if (!products) {
-        return <div>Loading...</div>;  // Mostrar un estado de carga mientras se obtienen los datos
+        return <div>Loading...</div>; 
     }
 
     return <ProductById id={id} />;

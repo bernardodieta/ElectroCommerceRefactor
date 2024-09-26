@@ -30,10 +30,10 @@ export const CartShop = () => {
         }
     };
 
-    // Cálculo del precio total y la cantidad de productos
+ 
     const totalProducts = cart.reduce((total, item) => total + item.quantity, 0);
     const totalPrice = cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
-    const shippingCost = 5; // Puedes definir un costo de envío fijo o dinámico
+    const shippingCost = 5; 
 
     return (
         <div className={`${styles.cartMain} ${roboto.className}`}>
@@ -92,10 +92,10 @@ export const CartShop = () => {
 
             <div className={`${styles.priceTotalBox} `}>
                 <h2>Resumen de compra</h2>
-                <p className={`${styles.FontMedium} `}>Productos: {totalProducts} {/* Aquí va la cantidad de productos */}</p>
-                <p className={`${styles.FontMedium} `}>Subtotal: $ {totalPrice.toFixed(2)} {/* Precio total sin envío */}</p>
-                <p className={`${styles.FontMedium} `}>Envío: $ {shippingCost.toFixed(2)} {/* Precio de envío */}</p>
-                <h3>Total: $ {(totalPrice + shippingCost).toFixed(2)} {/* Total con envío */}</h3>
+                <p className={`${styles.FontMedium} `}>Productos: {totalProducts}</p>
+                <p className={`${styles.FontMedium} `}>Subtotal: $ {totalPrice.toFixed(2)} </p>
+                <p className={`${styles.FontMedium} `}>Envío: $ {shippingCost.toFixed(2)} </p>
+                <h3>Total: $ {(totalPrice + shippingCost).toFixed(2)} </h3>
                 <button onClick={handleprePurchase}>Continuar Compra</button>
 
                 <p className={`${styles.Fontsmall} `}>Protección al comprador</p>

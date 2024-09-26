@@ -21,9 +21,9 @@ const PaymentForm = () => {
         });
 
         if (!error) {
-            // Pago exitoso
+            
             createAlertWithCallback('success', '¡Pago completado!', "El pago ha sido procesado con éxito", () => {
-                // Puedes redirigir al usuario o hacer alguna acción adicional
+               
                 window.location.replace('/');
             });
         } else {

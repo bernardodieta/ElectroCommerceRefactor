@@ -24,7 +24,6 @@ export const ProfileComponents = () => {
     });
 
 
-    // Sincroniza tempUser con el estado actual del usuario desde el store
     const [tempUser, setTempUser] = useState({
         firstName: user?.firstName || '',
         last_name: user?.last_name || '',
@@ -33,7 +32,6 @@ export const ProfileComponents = () => {
         tel: user?.tel || '',
     });
 
-    // Cada vez que el estado del usuario cambie, sincronizamos tempUser con los nuevos datos
     useEffect(() => {
         setTempUser({
             firstName: user?.firstName || '',
@@ -57,24 +55,23 @@ export const ProfileComponents = () => {
             ...prevState,
             [name]: value,
         }));
-    };
-    const [showModal, setShowModal] = useState(false); // Estado para controlar la visibilidad del modal
+    }
+    const [showModal, setShowModal] = useState(false); 
 
     const handleClickRouter = () => {
-        setShowModal(true); // Abrir modal al hacer clic
+        setShowModal(true); 
     };
 
     const closeModal = () => {
-        setShowModal(false); // Cerrar modal
+        setShowModal(false);
     };
-    // Función para actualizar los datos en el backend
+   
     const handleSave = async (field) => {
         try {
             let userUpdate = {
                 [field]: tempUser[field],
             };
 
-            // Llamada a la API con Axios
             const response = await axios.put('/api/users/profile/edit/', {
                 userUpdate
             });
@@ -82,13 +79,11 @@ export const ProfileComponents = () => {
             if (response.status === 201) {
                 console.log(response.data);
 
-                // Actualiza el estado del store con los nuevos datos
                 setUser({
                     ...user,
-                    ...response.data, // Asumiendo que la respuesta devuelve solo los campos actualizados
+                    ...response.data, 
                 });
 
-                // Deshabilita el modo edición para el campo guardado
                 setIsEditing((prevState) => ({
                     ...prevState,
                     [field]: false,
@@ -252,7 +247,7 @@ export const ProfileComponents = () => {
                             <button onClick={handleClickRouter}>Agregar nueva direccion</button>
                         </div>
 
-                        {/* Modal para agregar nueva dirección */}
+                    
                         {showModal && (
                             <div className={styles.modalBackdrop}>
                                 <div className={styles.modalContent}>

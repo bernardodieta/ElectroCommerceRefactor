@@ -9,13 +9,13 @@ const NotificationBell = () => {
     const [isOpen, setIsOpen] = useState(false);
     const loadUser = useUsersStore((state) => state.user);
     const fetchNotifications = useNotificationStore((state) => state.fetchNotifications);
-    const notifications = useNotificationStore((state) => state.notifications); // Asegúrate de traer el estado correctamente
+    const notifications = useNotificationStore((state) => state.notifications);
     const markAsRead = useNotificationStore((state) => state.markAsRead);
     const dropdownRef = useRef(null);
 
     useEffect(() => {
         if (loadUser?._id) {
-            console.log("User loaded:", loadUser);  // Verifica si el usuario se carga correctamente
+            console.log("User loaded:", loadUser); 
             fetchNotifications(loadUser._id)
                 .then(() => {
                     console.log("Notifications fetched successfully");
@@ -58,7 +58,7 @@ const NotificationBell = () => {
         };
     }, [isOpen]);
 
-    console.log("Notifications state:", notifications); // Verifica el estado de las notificaciones
+    console.log("Notifications state:", notifications); 
 
     return (
         <div className={styles.container} ref={dropdownRef}>

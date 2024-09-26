@@ -53,7 +53,7 @@ const ListProduct = () => {
     const handleDeleteProduct = async (productId) => {
         try {
             await axios.delete(`/api/products/${productId}`, {
-                withCredentials: true, // Permite el envío de cookies
+                withCredentials: true, 
             });
             setProducts(products.filter((product) => product._id !== productId));
         } catch (error) {

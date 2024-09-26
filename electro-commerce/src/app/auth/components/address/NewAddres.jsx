@@ -3,10 +3,9 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import axios from "axios";
 import styles from "./newaddress.module.css";
 
-// Componente Modal
 const Modal = ({ children, onClose }) => {
     const handleClickOutside = (e) => {
-        e.stopPropagation(); // Evita que el clic fuera del modal lo cierre
+        e.stopPropagation();
     };
 
     return (
@@ -30,7 +29,7 @@ export const NewAddress = ({ address, onUpdate, onDelete }) => {
 
     const handleEdit = (e) => {
         e.stopPropagation();
-        setIsModalOpen(true); // Abre el modal
+        setIsModalOpen(true); 
     };
 
     const handleDeleteAddress = async (e) => {
@@ -63,7 +62,7 @@ export const NewAddress = ({ address, onUpdate, onDelete }) => {
                 }
             );
             onUpdate(response.data.payload);
-            setIsModalOpen(false); // Cierra el modal después de guardar
+            setIsModalOpen(false); 
         } catch (error) {
             console.error("Error al actualizar la dirección:", error);
         }

@@ -9,8 +9,8 @@ const UsersList = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedUser, setSelectedUser] = useState(null); // Para abrir el modal con detalles del usuario
-  const [showModal, setShowModal] = useState(false); // Controla la visibilidad del modal
+  const [selectedUser, setSelectedUser] = useState(null); 
+  const [showModal, setShowModal] = useState(false); 
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -29,7 +29,6 @@ const UsersList = () => {
     fetchUsers();
   }, []);
 
-  // Función para eliminar usuario
   const handleDeleteUser = async (userId) => {
     try {
       await axios.delete(`/api/users/asd/${userId}`, {
@@ -41,7 +40,6 @@ const UsersList = () => {
     }
   };
 
-  // Función para ver los detalles del usuario en un modal
   const handleViewDetails = (user) => {
     setSelectedUser(user);
     setShowModal(true);
@@ -52,7 +50,7 @@ const UsersList = () => {
     setSelectedUser(null);
   };
 
-  // Función para cambiar el rol del usuario a ADMIN
+
   const handleMakeAdmin = async (userId) => {
     try {
       await axios.put(`/api/users/profile/edit/`, {

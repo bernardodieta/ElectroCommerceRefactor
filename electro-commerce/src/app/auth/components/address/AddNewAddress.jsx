@@ -28,7 +28,7 @@ const AddNewAddress = ({ onClose }) => {
         try {
             const response = await axios.post('/api/address/save', formData);
             setSuccessMessage('Dirección guardada exitosamente');
-            onClose(); // Cerrar el modal después de guardar
+            onClose(); 
         } catch (error) {
             setErrorMessage('Error al guardar la dirección');
         }
@@ -66,7 +66,7 @@ const AddNewAddress = ({ onClose }) => {
                 </div>
                 <div>
                     <button type="submit">Guardar</button>
-                    <button type="button" onClick={onClose}>Cancelar</button> {/* Botón para cancelar y cerrar el modal */}
+                    <button type="button" onClick={onClose}>Cancelar</button> 
                 </div>
             </form>
         </div>

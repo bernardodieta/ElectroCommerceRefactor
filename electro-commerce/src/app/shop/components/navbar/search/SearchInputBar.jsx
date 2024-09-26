@@ -10,17 +10,17 @@ export const SearchInputBar = () => {
     const { query, filteredResults = [], isLoading, handleInputChange, clearSearch } = useSearchController();
     const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef(null);
-    const containerRef = useRef(null); // Nuevo ref para el contenedor del input y resultados
+    const containerRef = useRef(null); 
 
     const handleFocusInput = () => {
         setIsFocused(true);
     };
 
     const handleBlurInput = (e) => {
-        // Si el clic ocurre fuera del contenedor (input + resultados), ocultar los resultados
+        
         if (containerRef.current && !containerRef.current.contains(e.target)) {
             setIsFocused(false);
-            clearSearch(); // Opcional: limpia la búsqueda cuando se hace clic fuera
+            clearSearch(); 
         }
     };
 

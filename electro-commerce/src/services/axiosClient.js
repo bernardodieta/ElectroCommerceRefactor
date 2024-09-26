@@ -24,10 +24,10 @@ export default class AxiosClient {
   static async postRequest({ url, body, config }) {
     try {
       const response = await axios.post(url, body, config);
-      return response; // Asegúrate de retornar la respuesta
+      return response; 
     } catch (error) {
       console.error("Error en la solicitud POST:", error);
-      throw error; // Re-lanza el error para que pueda ser manejado más arriba
+      throw error; 
     }
   }
 

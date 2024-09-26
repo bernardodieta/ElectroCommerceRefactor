@@ -18,13 +18,13 @@ export const FavoritesMenu = () => {
 
     const handleClickOutside = (event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setIsOpen(false); // Cerrar el menú si haces clic fuera
+            setIsOpen(false); 
         }
     };
 
     const handleClickProduct = (id) => {
         router.push(`/shop/product/${id}`);
-        setIsOpen(false); // Cierra la lista cuando se selecciona un producto
+        setIsOpen(false);
     };
 
     useEffect(() => {
