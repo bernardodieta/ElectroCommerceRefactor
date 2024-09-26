@@ -1,0 +1,125 @@
+/* userOrders.module.css */
+.ordersContainer {
+  max-width: 900px; /* Máximo ancho del contenedor */
+  margin: 20px auto; /* Centra el contenedor en la página */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 15px;
+  gap: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.orderColumDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.columDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+}
+
+.order h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.orderDetail {
+  display: flex; /* Utiliza flexbox para alinear etiquetas y valores */
+  margin: 5px 0; /* Espaciado entre detalles */
+}
+
+.label {
+  font-weight: bold; /* Resalta las etiquetas */
+  color: #333; /* Color de texto de la etiqueta */
+  margin-right: 10px; /* Espaciado entre la etiqueta y el valor */
+}
+
+.value {
+  color: #1a1a1a; /* Color de texto del valor */
+}
+.valueRed {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  background-color: #fd0000;
+  color: #ffffff; /* Color de texto del valor */
+}
+.valueGreen {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  background-color: #1eff00;
+  color: #030303; /* Color de texto del valor */
+}
+
+.productItem {
+  margin-top: 10px; /* Espaciado superior entre productos */
+  padding: 0.2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.productDetail {
+  display: flex; /* Utiliza flexbox para alinear etiquetas y valores en productos */
+  margin: 5px 0; /* Espaciado entre detalles */
+}
+
+.productItem h3 {
+  max-width: 400px;
+  font-size: 1em;
+  color: #555; /* Color gris */
+}
+
+.productImage {
+  width: 100px;
+  height: auto;
+  max-width: 50px;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: transform 0.3s; /* Animación al pasar el mouse */
+}
+
+.btnActEstado {
+  background-color: #ffbb00;
+  color: #030303;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnselectOption {
+  background-color: #fdecbd;
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+.orderDetailStatus {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+
+  align-items: center;
+}
+.btnBorrarOrden {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  max-height: 40px;
+  cursor: pointer;
+  background-color: #ffbb00;
+  border: none;
+}

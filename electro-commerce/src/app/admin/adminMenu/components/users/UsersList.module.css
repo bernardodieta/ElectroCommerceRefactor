@@ -1,0 +1,90 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.userList {
+  list-style: none;
+  padding: 0;
+}
+
+.userItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.userItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.userRole {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.actionBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #0070f3;
+  transition: color 0.2s ease;
+}
+
+.actionBtn:hover {
+  color: #005bb5;
+}
+
+.actionBtn:active {
+  color: #003f7d;
+}
+
+.actionBtn[title="Eliminar"] {
+  color: #e00;
+}
+
+.actionBtn[title="Eliminar"]:hover {
+  color: #c00;
+}
+
+.actionBtn[title="Hacer Admin"] {
+  color: #f39c12;
+}
+
+.actionBtn[title="Hacer Admin"]:hover {
+  color: #e67e22;
+}

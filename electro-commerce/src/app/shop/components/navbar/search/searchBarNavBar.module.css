@@ -1,0 +1,106 @@
+/* Contenedor principal de la barra de búsqueda */
+.containerSearchBar {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilos del formulario */
+.formSearchBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Input de búsqueda */
+.inputSearch {
+  width: 500px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Input con foco */
+.focusedInput {
+  width: 500px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-color: #0070f3;
+
+  box-shadow: 0 0 8px rgba(0, 112, 243, 0.5);
+}
+
+/* Estilos para el botón */
+.button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Loading indicator */
+.loading {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Lista de resultados */
+.resultsList {
+  position: absolute;
+  top: 100%; /* Coloca la lista justo debajo del input */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  max-height: 300px; /* Limita la altura */
+  overflow-y: auto; /* Hace scroll si hay muchos resultados */
+  z-index: 10;
+}
+
+/* Elementos de la lista de resultados */
+.resultItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.resultItem:hover {
+  background-color: #f0f0f0;
+}
+
+/* Imagen en los resultados */
+.resultImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: cover;
+  text-decoration: none;
+}
+
+/* Texto del resultado */
+.resultText {
+  
+  font-size: 14px;
+  text-decoration: none;
+
+  color: #333;
+}
+.linkText {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}

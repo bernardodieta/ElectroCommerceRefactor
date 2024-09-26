@@ -1,0 +1,33 @@
+.categoryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+.categoryContainer h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.categoryTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.productGridContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.barraTitle {
+  display: flex;
+  width: 3px;
+  height: 20px;
+  background-color: #00abe4;
+}

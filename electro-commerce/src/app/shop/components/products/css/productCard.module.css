@@ -1,0 +1,77 @@
+.productGridContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cardContainer {
+  max-width: 230px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+  border-radius: 1rem;
+  border-color: black;
+  border-width: 2px;
+  
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.175),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.cardImg {
+  display: flex;
+  width: 100%;
+  object-fit: contain;
+  max-height: 150px;
+  padding: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  position: absolute;
+  width: 80px;
+  float: right;
+}
+.cardContainer h3 {
+  font-size: 1.1rem;
+  text-align: left;
+  max-width: 230px;
+  padding: 0.2rem 0.2rem;
+  color: #404040;
+}
+.cardContainer h4 {
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 0.2rem 0.2rem;
+  color: #595959;
+}
+.cardContainer .price {
+  font-size: 1.6rem;
+  text-align: left;
+  padding: 0.3rem 0.2rem;
+  color: #151515;
+}
+.cardContainer .meses {
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.3rem 0.2rem;
+  color: #13ba04;
+}
+.cardContainer button {
+  background-color: #ffca0d;
+  border: none;
+  width: 60%;
+  margin: .4rem auto;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0;
+  position: relative;
+  cursor: pointer;
+  z-index: 1000;
+}

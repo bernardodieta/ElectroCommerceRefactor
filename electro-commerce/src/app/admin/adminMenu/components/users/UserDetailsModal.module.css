@@ -1,0 +1,147 @@
+/* Estilos generales del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Contenido del modal */
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Sección del avatar */
+.avatarSection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.defaultAvatar {
+  font-size: 100px;
+  color: #ccc;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 20px;
+}
+
+/* Sección de documentos */
+.documentsSection,
+.productsSection {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.documentsSection ul,
+.productsSection ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0;
+}
+
+.documentsSection li,
+.productsSection li {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.documentsSection li:last-child,
+.productsSection li:last-child {
+  border-bottom: none;
+}
+
+.documentIcon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Estilos de productos */
+.productItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(255, 246, 225);
+  border-radius: 0.4rem;
+  margin-bottom: 10px;
+}
+
+.productImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+.placeholderImage {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  margin-right: 10px;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.productTitle {
+  margin: 0; /* Eliminar margen por defecto */
+}
+
+.productPrice {
+  margin: 0; /* Eliminar margen por defecto */
+  font-weight: bold; /* Resaltar el precio */
+}
+
+/* Botón de cierre */
+.closeBtn {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.closeBtn:hover {
+  background: #d32f2f;
+}
